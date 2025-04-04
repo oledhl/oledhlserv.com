@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1><title>OLED HL Services - Loan Processing</title></h1>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;550;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fc;
+        }
+        header {
+            background-color: #003b5c;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+        }
+        header nav {
+            margin-top: 10px;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 500;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .main-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .loan-types, .loan-benefits, .eligibility, .contact-info, .about-us, .basic-info, .job-enquiry {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #003b5c;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: #555;
+        }
+        li span {
+            font-weight: 600;
+            color: #003b5c;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #003b5c;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 10px;
+        }
+        .cta-button:hover {
+            background-color: #004d74;
+            transform: scale(1.05);
+        }
+        .contact-info {
+            text-align: center;
+        }
+        .contact-info .info-item {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .contact-info a {
+            color: #003b5c;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .basic-info {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .basic-info span {
+            font-weight: bold;
+            color: #003b5c;
+        }
+        .jharkhand-map-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .jharkhand-map-container img {
+            max-width: 45%;
+            border-radius: 10px;
+        }
+        .job-enquiry label {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #003b5c;
+            display: block;
+            margin-top: 10px;
+        }
+        .job-enquiry input[type="text"], .job-enquiry input[type="email"], .job-enquiry input[type="tel"], .job-enquiry input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .job-enquiry button {
+            margin-top: 20px;
+        }
+        .payment-section {
+            margin-top: 30px;
+            background-color: #e9f5fc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .payment-section h3 {
+            color: #003b5c;
+            font-size: 1.8rem;
+        }
+        .payment-section p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+        .payment-section a {
+            color: #003b5c;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>OLED HL Services - Loan Processing</h1>
+        <nav>
+            <a href="#loan-types">Loan Types</a>
+            <a href="#loan-benefits">Loan Benefits</a>
+            <a href="#eligibility">Eligibility</a>
+            <a href="#contact">Contact</a>
+            <a href="https://www.thecompanycheck.com/company/oled-hl-services-private-limited/U74999JH2018PTC012085">About Us</a>
+            <a href="https://emicalculator.net/loan-calculator/" target="_blank" class="cta-button">EMI Calculator</a>
+            <a href="https://drive.google.com/drive/folders/1ATHQo0iQOT_O57KueIU9jqee0Ozsseip?usp=sharing" target="_blank" class="cta-button">Customer Gallery (you can see our happy customers)</a>
+
+        </nav>
+    </header>
+    <div class="main-container">
+        <div class="loan-types" id="loan-types">
+            <h2>Our Loan Types with low % rate of interest</h2>
+            <ul>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
+                <li><span>Personal Loans:</span> <a href="https://forms.gle/ZWtLyR89c789dzNm9" target="_blank" class="cta-button">Enquary Now</a></li> 
+                <li><span>Home Loans:</span> <a href="https://forms.gle/ZWtLyR89c789dzNm9" target="_blank" class="cta-button">Enquary Now</a></li>
+                <li><span>Mortgage Loans:</span> <a href="https://forms.gle/ZWtLyR89c789dzNm9" target="_blank" class="cta-button">Enquary Now</a></li>
+                <li><span>Business Loans:</span> <a href="https://forms.gle/ZWtLyR89c789dzNm9" target="_blank" class="cta-button">Enquary Now</a></li>
+            </ul>
+<div class="container">
+    <h2>Available Forms</h2>
+    <p>Below are the links to download the PDF forms:</p>
+    
+    <a href="https://drive.google.com/file/d/10MdoT4ZslmLqkjDjcl2T0Vorwu2IDliv/view?usp=sharing" class="form-link" target="_blank">pvt banks biodata form</a><br>
+    <a href="https://drive.google.com/file/d/1Nk3fnAz2rwzMnV36mJtcCJBqnDNww6L_/view?usp=sharing" class="form-link" target="_blank">sbi personal loan biodata form</a><br>
+    <a href="https://drive.google.com/file/d/10W1Y5lYH7WcI9FWl44e7D3nRRRciGp4X/view?usp=sharing" class="form-link" target="_blank">Home Loan biodata form</a>
+    <br><a href="https://drive.google.com/file/d/179VSp79pAk6n0UN9t543IEUmEsyUhEdX/view?usp=sharing" class="form-link" target="_blank">Account Statement Letter form</a></br>
+</div>
+<iframe 
+    src="https://drive.google.com/file/d/1AP5LGrIPTaCxNN9a38ghtBJsfOMWMsUC/preview" 
+    style="
+        width: 45%; 
+        max-width: 450px; 
+        height: auto; 
+        aspect-ratio: 16/14;
+        border: none; 
+        border-radius: 10px;
+        overflow: hidden;
+        background: transparent;
+    ">
+</iframe>
+<img src="https://cdn.pixabay.com/animation/2024/10/18/08/45/08-45-02-16_512.gif" 
+             style="max-width: 20%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+<iframe 
+    src="https://drive.google.com/file/d/1E93cWf4GnpIh5zU5c52OmcaZLDg0ijLq/preview" 
+    style="
+        width: 45%; 
+        max-width: 450px; 
+        height: auto; 
+        aspect-ratio: 16/14;
+        border: none; 
+        border-radius: 10px;
+        overflow: hidden;
+        background: transparent;
+    ">
+</iframe>
+
+            <div class="payment-section">
+                <h3>Fee & Charges</h3>
+                <p>Pay your fee and charges securely using UPI:</p>
+                <p>UPI ID: <strong>7070462940@ybl</strong></p>
+                <a href="upi://pay?pa=7070462940@ybl&pn=OLED%20HL%20Services&mc=0207&tid=123456&url=https://www.oledhlservices.com">Pay Now</a>
+            </div>
+
+        
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Certificate</title>
+    <style>
+        .certificate-container {
+            width: 60%;
+            margin: 50px auto;
+            padding: 30px;
+            border: 10px solid #004d74;
+            border-radius: 10px;
+            text-align: center;
+            background: #f9f9f9;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .certificate-container h2 {
+            font-size: 24px;
+            color: #004d74;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .certificate-container p {
+            font-size: 16px;
+            margin: 5px 0;
+            color: #333;
+        }
+
+        .certificate-container span {
+            font-weight: bold;
+        }
+
+        .certificate-logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .certificate-footer {
+            margin-top: 20px;
+            font-size: 14px;
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="certificate-container" id="about-us">
+        <h2>Certificate of Registration</h2>
+        <p><span>CIN:</span> U74999JH2018PTC012085</p>
+        <p><span>Name:</span> OLED HL Services Pvt. Ltd.</p>
+        <p><span>Listed on Stock Exchange:</span> Unlisted</p>
+        <p><span>Company Status:</span> Active</p>
+        <p><span>ROC:</span> ROC Jharkhand</p>
+        <p><span>Registration Number:</span> 12085</p>
+        <p><span>Company Category:</span> Company limited by shares</p>
+        <p><span>Company Sub Category:</span> Non-government company</p>
+        <p><span>Class of Company:</span> Private</p>
+        <p><span>Date of Incorporation:</span> 26 October 2018</p>
+        <p><span>Activity:</span> NIC Code: 749</p>
+        <p><span>NIC Description:</span> Business activities n.e.c.</p>
+    </div>
+
+</body>
+</html>
+
+        <div class="loan-benefits" id="loan-benefits">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li><span>Competitive Interest Rates:</span> We offer some of the best rates in the market.</li>
+                <li><span>Quick Processing:</span> Get loan approval in the shortest time possible.</li>
+                <li><span>Flexible Repayments:</span> Choose from various repayment schedules that fit your needs.</li>
+                <li><span>Minimal Documentation:</span> We require fewer documents for a faster approval process.</li>
+                <li><span>24/7 Customer Support:</span> Our team is always available to assist you.</li>
+            </ul>
+        </div>
+
+        <div class="eligibility" id="eligibility">
+            <h2>Eligibility Criteria</h2>
+            <ul>
+                <li><span>Age:</span> Applicants should be between 21 and 60 years old.</li>
+                <li><span>Income:</span> Minimum monthly income of ₹20,000 for personal loans and ₹25,000 for home/business loans.</li>
+                <li><span>Credit Score:</span> A credit score of 650 and above is preferred.</li>
+                <li><span>Employment Status:</span> Government, Private, Permanent employees, self-employed individuals, and business owners are eligible to apply.</li>
+                <li><span>Documents:</span> Proof of identity, address, and income are required.</li>
+            </ul>
+        </div>
+
+<h1 style="color: #004d74; text-decoration: underline; background-blue: red;">WHY CUSTOMERS CHOOSING OLEDHL FOR LOAN PROCESSING</h1>
+<h4>Multiple Loan Products:</h4> They offer a wide range of loan options <h3>(Personal loans, Home loans, Business loans, etc. at low rate of interest %*)from various<h3>Banks(ICICI,HDFC,SBI,KOTAK MAHINDRA,AXIS,CHOLAMANDALAM, etc.)/financial institutions,</h3> allowing customers to choose the best fit for their needs.<br>
+
+<h4>Experienced Team:</h4> OLED HL Services Pvt. Ltd. has a team of experts who have vast experience in loan processing, ensuring smooth and efficient handling of all the steps from application to approval.</br>
+
+<h4>Quick Turnaround Time:</h4> The company focuses on quick loan processing, reducing wait times for customers, and ensuring fast approvals for those in urgent need of financial support.<br>
+
+<h4>Transparent Process:</h4> They maintain transparency at every step of the loan processing. Customers are informed about all fees, terms, and conditions upfront, avoiding any hidden surprises.<br>
+
+<h4>Personalized Service:</h4> OLED HL Services Pvt. Ltd. offers personalized loan advice tailored to the customer's financial situation, making sure that they choose the right loan product.<br>
+
+<h4>Customer-Centric Approach:</h4> The company prioritizes customer satisfaction and strives to provide outstanding customer service throughout the loan application process and beyond.<br>
+
+<h4>Easy Application Process:</h4> With a user-friendly interface and streamlined processes, applying for a loan is easy and hassle-free, making the experience convenient for customers.<br>
+
+<h4>Competitive Interest Rates:</h4> OLED HL Services Pvt. Ltd. partners with leading financial institutions to offer competitive interest rates, making loans more affordable for customers.<br>
+
+<h4>Expert Financial Advice:</h4> Customers can get expert advice on improving their creditworthiness and optimizing loan repayment, helping them manage finances better.<br>
+
+<h3>These factors make OLED HL Services Pvt. Ltd. a reliable and customer-friendly choice for loan processing.</h3><br><br>
+
+        <div class="contact-info" id="contact">
+            <h2>Contact Us</h2>
+            <div class="info-item">
+    <strong><img src="https://img.icons8.com/ios-filled/20/000000/address.png" alt="Address"> Branch Address:</strong> 
+    AH Complex, Near Kadru Petrol Pump, Ranchi
+</div>
+
+<div class="info-item">
+    <strong>Other Branches:</strong> 
+    (i). Near Mishra Toli Durga Mandir Khunti, 
+    (ii). Near Sahu Petrol Pump Lohardaga
+</div>
+
+<div class="info-item">
+    <strong><img src="https://img.icons8.com/ios-filled/20/000000/phone.png" alt="Phone"> Contact Number:</strong> 
+    <a href="tel:+917070462940">7070462940</a><br>
+    <a href="tel:+919431983790">9431983790</a>
+</div>
+
+<div class="info-item">
+    <strong><img src="https://img.icons8.com/ios-filled/20/000000/email.png" alt="Email"> Email:</strong> 
+    <a href="mailto:OLEDHL20@GMAIL.COM">OLEDHL20@GMAIL.COM</a>
+</div>
+
+<div class="info-item">
+    <strong><img src="https://img.icons8.com/ios-filled/20/25D366/whatsapp.png" alt="WhatsApp"> WhatsApp:</strong> 
+    <a href="https://wa.me/917070462940" target="_blank">
+        7070462940
+    </a>
+</div>
+
+        </div>
+<h1><p style="font-size: 30px;"text-align: center;>Our team</p></h2>
+<iframe 
+    src="https://drive.google.com/file/d/1N7uAOckOuRaxKOQz-6jJ-7Ss46qzOtNt/preview" 
+    style="
+        width: 100%; 
+        max-width: 1000px; 
+        height: auto; 
+        aspect-ratio: 16/14;
+        border: none; 
+        border-radius: 10px;
+        overflow: hidden;
+        background: transparent;
+    ">
+</iframe>
+<iframe 
+    src="https://drive.google.com/file/d/1N5GBe5CCh3UZP1NafOGtSaaImpZKqEVc/preview" 
+    style="
+        width: 30%; 
+        max-width: 400px; 
+        height: auto; 
+        aspect-ratio: 16/14;
+        border: none; 
+        border-radius: 10px;
+        overflow: hidden;
+        background: transparent;
+    ">
+</iframe>
+<iframe 
+    src="https://drive.google.com/file/d/1N81hkJAsfjav7K4lz0Qrx7vOyywazsqq/preview" 
+    style="
+        width: 30%; 
+        max-width: 400px; 
+        height: auto; 
+        aspect-ratio: 16/14;
+        border: none; 
+        border-radius: 10px;
+        overflow: hidden;
+        background: transparent;
+    ">
+</iframe>
+<iframe 
+    src="https://drive.google.com/file/d/1NeMzuLvLamIY80CeBhGw0RvrRK6Vn8z5/preview" 
+    style="
+        width: 30%; 
+        max-width: 400px; 
+        height: auto; 
+        aspect-ratio: 16/14;
+        border: none; 
+        border-radius: 10px;
+        overflow: hidden;
+        background: transparent;
+    ">
+</iframe>
+
+
+</body>
+</html>
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+
+        /* Applying the shaded 3D background to the About Us section */
+        #about-us {
+            background: linear-gradient(135deg, #f3f3f3, #d1d1d1); /* Shaded gradient */
+            border-radius: 10px; /* Soft rounded edges */
+            padding: 20px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* 3D shadow effect */
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            color: #444;
+            margin: 5px 0;
+        }
+
+        span {
+            font-weight: bold;
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>
+        <div class="job-enquiry" id="job-enquiry">
+            <h2>job opportunities with attractive salary and incentive</h2>
+            <h2>Submit Your Resume</h2>
+            <p>If you are interested in working with us, for TELE CALLER, SALES STAFF, FIELD WORK please fill out the form below and upload your resume. We will get back to you soon!</p>
+            <form action="mailto:OLEDHL20@gmail.com" method="post" enctype="multipart/form-data">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                 <label for="Highest Qaulification">Qaulification:</label>
+                 <input type="text" id="Qaulification" Qaulification="Qaulification" placeholder="Enter your Highest Qaulification" required>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                <label for="phone">Contact Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your contact number" required>
+                <label for="resume">Upload Resume (PDF/DOC):</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                <button type="submit" class="cta-button">Send Resume</button>
+            </form>
+        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Login and Lead Submission</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;550;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fc;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #003b5c;
+        }
+        .login-container label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .login-container input[type="text"], .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #003b5c;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #004d74;
+        }
+        .lead-form {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: linear-gradient(145deg, #e0e5ec, #ffffff); /* 3D shaded effect */
+            box-shadow: 8px 8px 16px #babecc, -8px -8px 16px #ffffff; /* Neumorphism effect */
+            display: none;
+            border-radius: 8px;
+        }
+        .lead-form h2 {
+            margin-bottom: 20px;
+            color: #003b5c;
+        }
+        .lead-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .lead-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .lead-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #003b5c;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .lead-form button:hover {
+            background-color: #004d74;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container" id="login-container">
+        <h2>Employee Login</h2>
+        <form id="login-form">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div class="lead-form" id="lead-form">
+        <h2>Lead Submission Form</h2>
+    </div>
+</body>
+</html>
+
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Replace these with actual username and password
+            const correctUsername = 'oled';
+            const correctPassword = 'Akash@70';
+
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+// Validate credentials
+        if (username === correctUsername && password === correctPassword) {
+            window.location.href = "https://forms.gle/vn1B1BTKwPQkFhke8"; // Redirect to Google Form
+        } else {
+            alert('Invalid credentials, please try again.');
+        }
+    });
+    </script>
+</body>
+</html>
+
+        <div class="about-us" id="about">
+            <h2>About OLED HL Services Pvt. Ltd.</h2>
+            <p>OLED HL Services Pvt. Ltd. is a leading financial services provider more than 40 banks personal and home laon offering a wide range of loan products to individuals and businesses...</p>
+            <div class="jharkhand-map-container">
+                <img src="https://www.moneycompass.net/wp-content/uploads/All-Bank-Logos.jpg" alt="All Bank Logos" width="600" height="500">
+                <img src="https://www.mapsofindia.com/maps/jharkhand/jharkhand-map.jpg" alt="Jharkhand Map with Districts" width="600" height="500">
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+
